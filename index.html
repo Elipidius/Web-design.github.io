@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Store - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .product {
+      margin-bottom: 30px;
+    }
+    footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Computer Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indeX.html#loginModal" data-toggle="modal" data-target="#loginModal">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="container mt-5">
+    <h2>Featured Products</h2>
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card product">
+          <img src="computer 1.jpg" class="card-img-top" alt="Computer 1">
+          <div class="card-body">
+            <h5 class="card-title">Computer 1</h5>
+            <p class="card-text">$999</p>
+            <a href="#loginModal" class="btn btn-primary" data-toggle="modal">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card product">
+          <img src="computer 2.jpg" class="card-img-top" alt="Computer 2">
+          <div class="card-body">
+            <h5 class="card-title">Computer 2</h5>
+            <p class="card-text">$1299</p>
+             <a href="#loginModal" class="btn btn-primary" data-toggle="modal">Add to Cart</a>
+           </div>
+           </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card product">
+          <img src="computer 3.jpg" class="card-img-top" alt="Computer 3">
+          <div class="card-body">
+            <h5 class="card-title">Computer 3</h5>
+            <p class="card-text">$899</p>
+           <a href="#loginModal" class="btn btn-primary" data-toggle="modal">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thank You Modal -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for joining our family! You are now a member of our community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Handle login form submission
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Simulate login process
+      // Assuming successful login
+      $('#loginModal').modal('hide');
+      $('#thankYouModal').modal('show');
+    });
+  </script>
+  <footer>
+  <p> Computer Store.</p>
+</footer>
+</body>
+</html>
